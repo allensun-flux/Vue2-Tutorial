@@ -2,10 +2,14 @@ const app = new Vue({
   el: '#app',
   data: {
     name: 'Allen',
-    age: '25',
+    age: 25,
     job: 'Ninja',
     website: 'http://www.thenetninja.co.uk',
-    websiteTag: '<a href="http://www.thenetninja.co.uk">The Ninja Tag</a>'
+    websiteTag: '<a href="http://www.thenetninja.co.uk">The Ninja Tag</a>',
+    a: 0,
+    b: 0,
+    available: false,
+    nearby: false,
   },
   methods: {
     greeting: function () {
@@ -25,6 +29,31 @@ const app = new Vue({
     logAge: function () {
       console.log('You entered your age')
     },
+    // Both methods will be triggered if either values change
+    // addToA: function () {
+    //   console.log('click A');
+    //   return this.a + this.age;
+    // },
+    // addToB: function () {
+    //   console.log('click B');
+    //   return this.b + this.age;
+    // }
+  },
+  computed: {
+    addToA: function () {
+      console.log('click A');
+      return this.a + this.age;
+    },
+    addToB: function () {
+      console.log('click B');
+      return this.b + this.age;
+    },
+    compClasses: function () {
+      return {
+        available: this.available,
+        nearby: this.nearby,
+      }
+    }
   }
 })
 
