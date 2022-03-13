@@ -10,6 +10,18 @@ const app = new Vue({
     b: 0,
     available: false,
     nearby: false,
+    error: false,
+    success: false,
+    ninjas: [
+      {
+        name: 'ninja1',
+        age: 12,
+      },
+      {
+        name: 'ninja2',
+        age: 21,
+      },
+    ]
   },
   methods: {
     greeting: function () {

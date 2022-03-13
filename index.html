@@ -53,6 +53,39 @@
         <span>Change color</span>
       </div>
     </div>
+    <div>
+      <h1>#11 if condition</h1>
+      <button v-on:click="error = !error">Toggle Error</button>
+      <button v-on:click="success = !success">Toggle Success</button>
+      <!-- add/remove an element -->
+      <p v-if="error">There is an error</p>
+      <p v-else-if="success">Whooo, success : )</p>
+      <!-- display an element or not  -->
+      <p v-show="error">Error</p>
+      <p v-show="success">Success</p>
+    </div>
+    <div>
+      <h1>#12 v-for</h1>
+      <ul>
+        <li v-for="ninja in ninjas">
+          <p>Name: {{ ninja.name }}</p>
+          <p>Age: {{ ninja.age }}</p>
+        </li>
+      </ul>
+      <div v-for="ninja in ninjas">
+        <p>Name: {{ ninja.name }}</p>
+        <p>Age: {{ ninja.age }}</p>
+      </div>
+      <template v-for="ninja in ninjas">
+        <p>Name: {{ ninja.name }}</p>
+        <p>Age: {{ ninja.age }}</p>
+      </template>
+      <!-- iterate val, key pair -->
+      <template v-for="ninja in ninjas">
+        <p v-for="(val, key) in ninja">{{ val }}: {{ key }}</p>
+      </template>
+    </div>
+    <div></div>
   </div>
   <div id="canvas" v-on:mousemove="updateXY">
     {{ x }}, {{ y }}
