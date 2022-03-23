@@ -89,6 +89,13 @@
       <h2>#15 components</h2>
       <greeting></greeting>
     </div>
+    <div>
+      <h2>#16 Refs</h2>
+      <input type="text" ref="inputFood" />
+      <button v-on:click="readRefs">Submit</button>
+      <p>Your favorite food: {{ output }}</p>
+      <div ref="hello">Hello world!</div>
+    </div>
     <div></div>
   </div>
   <div id="canvas" v-on:mousemove="updateXY">

@@ -36,7 +36,8 @@ const app = new Vue({
         name: 'ninja2',
         age: 21,
       },
-    ]
+    ],
+    output: '',
   },
   methods: {
     greeting: function () {
@@ -56,6 +57,11 @@ const app = new Vue({
     logAge: function () {
       console.log('You entered your age')
     },
+    readRefs: function () {
+      console.log(this.$refs.inputFood.value);
+      console.log(this.$refs.hello.innerText);
+      this.output = this.$refs.inputFood.value;
+    }
     // Both methods will be triggered if either values change
     // addToA: function () {
     //   console.log('click A');
