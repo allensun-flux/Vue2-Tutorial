@@ -5,17 +5,23 @@
 </template>
 
 <script>
+import { bus } from '../main';
+
 export default {
   data() {
-    return {}
+    return {
+      title: 'Vue Ninja'
+    }
   },
   props: {
-    title: {title: String, require: true}
+    // title: {title: String, require: true}
   },
   methods: {
     changeTitle: function() {
       // this.title = "Vue Wizards";
-      this.$emit('changeTitle', 'Vue Wizards')
+      // this.$emit('changeTitle', 'Vue Wizards')
+      this.title = 'Vue Wizards';
+      bus.$emit('titleChanged', 'Vue Wizards');
     }
   }
 }

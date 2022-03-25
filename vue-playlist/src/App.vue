@@ -3,7 +3,7 @@
     <div>
       <app-header :title="ninjasTitle" v-on:changeTitle="updateTitle($event)"/>
       <app-ninjas :ninjas="ninjas" :ninjasTitle="ninjasTitle"/>
-      <app-ninjas :ninjas="ninjas" :ninjasTitle="ninjasTitle"/>
+      <!-- <app-ninjas :ninjas="ninjas" :ninjasTitle="ninjasTitle"/> -->
       <app-footer :title="ninjasTitle"/>
     </div>
     <!-- <div>
