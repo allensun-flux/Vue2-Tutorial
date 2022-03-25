@@ -2,7 +2,7 @@
   <div>
     <div>
       <app-header />
-      <app-ninjas />
+      <app-ninjas :ninjas="ninjas"/>
       <app-footer />
     </div>
     <!-- <div>
@@ -28,6 +28,13 @@ export default {
   data () {
     return {
       title: 'Ninja App',
+      ninjas: [
+        {name: 'Ryu', specialty: 'Vue Components', show: false},
+        {name: 'Crystal', specialty: 'HTML Wizardry', show: false},
+        {name: 'Hitoshi', specialty: 'Click Event', show: false},
+        {name: 'Tango', specialty: 'Conditionals', show: false},
+        {name: 'Kami', specialty: 'Webpack', show: false},
+      ]
     }
   },
   methods: {
