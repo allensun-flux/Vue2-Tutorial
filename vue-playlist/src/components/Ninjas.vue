@@ -32,24 +32,24 @@ export default {
     }
   },
   // lifecycle hooks
-  beforeCreate() {
-    alert('beforeCreate');
-  },
-  created() {
-    alert('created');
-  },
-  beforeMount() {
-    alert('beforeMount');
-  },
-  mounted() {
-    alert('mounted');
-  },
-  beforeUpdate() {
-    alert('beforeUpdate');
-  },
-  updated() {
-    alert('updated');
-  },
+  // beforeCreate() {
+  //   alert('beforeCreate');
+  // },
+  // created() {
+  //   alert('created');
+  // },
+  // beforeMount() {
+  //   alert('beforeMount');
+  // },
+  // mounted() {
+  //   alert('mounted');
+  // },
+  // beforeUpdate() {
+  //   alert('beforeUpdate');
+  // },
+  // updated() {
+  //   alert('updated');
+  // },
 
 }
 </script>
