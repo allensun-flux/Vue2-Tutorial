@@ -16,6 +16,12 @@
         <!-- <h2 slot="title">{{ title }}</h2> -->
         <!-- <p slot="text">I am the paragraph text for the slot</p> -->
       </form-helper>
+      <!-- Dynamic Component -->
+      <keep-alive>
+        <component v-bind:is="component" />
+      </keep-alive>
+      <button v-on:click="component = 'app-header'">Show Header</button>
+      <button v-on:click="component = 'app-footer'">Show Footer</button>
       <!-- <app-header :title="ninjasTitle" v-on:changeTitle="updateTitle($event)"/> -->
       <!-- <app-ninjas :ninjas="ninjas" :ninjasTitle="ninjasTitle"/> -->
       <!-- <app-ninjas :ninjas="ninjas" :ninjasTitle="ninjasTitle"/> -->
@@ -45,6 +51,7 @@ export default {
   },
   data () {
     return {
+      component: 'app-header',
       title: 'Ninja App',
       ninjas: [
         {name: 'Ryu', specialty: 'Vue Components', show: false},
@@ -60,6 +67,7 @@ export default {
     // greeting() {
     //   return 'heeeeey, cowboy!';    
     // }
+    handleSubmit() {},
     updateTitle(updatedTitle) {
       this.ninjasTitle = updatedTitle;
     }
