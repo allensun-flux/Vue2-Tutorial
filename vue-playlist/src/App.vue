@@ -1,9 +1,10 @@
 <template>
   <div>
     <div>
-      <app-header />
-      <app-ninjas :ninjas="ninjas"/>
-      <app-footer />
+      <app-header :title="ninjasTitle"/>
+      <app-ninjas :ninjas="ninjas" :ninjasTitle="ninjasTitle"/>
+      <app-ninjas :ninjas="ninjas" :ninjasTitle="ninjasTitle"/>
+      <app-footer :title="ninjasTitle"/>
     </div>
     <!-- <div>
       <h1>#19 Nesting Components</h1>
@@ -34,7 +35,8 @@ export default {
         {name: 'Hitoshi', specialty: 'Click Event', show: false},
         {name: 'Tango', specialty: 'Conditionals', show: false},
         {name: 'Kami', specialty: 'Webpack', show: false},
-      ]
+      ],
+      ninjasTitle: 'Ninjas',
     }
   },
   methods: {

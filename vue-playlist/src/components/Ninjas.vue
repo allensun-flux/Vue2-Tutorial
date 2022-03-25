@@ -1,5 +1,6 @@
 <template>
   <div id="ninja">
+    <h1>{{ ninjasTitle }}</h1>
     <ul>
       <li 
         v-for="(ninja, index) in ninjas" 
@@ -10,6 +11,7 @@
         <h3 v-show="ninja.show">{{ ninja.specialty }}</h3>
       </li>
     </ul>
+    <button v-on:click="deleteNinja">Delete</button>
   </div>
 </template>
 
@@ -17,12 +19,18 @@
 export default {
   name: 'ninjas',
   props: {
-    ninjas: {type: Array, required: true}
+    ninjas: {type: Array, required: true},
+    ninjasTitle: {type: String, required: true},
   },
   data() {
     return {
     }
   },
+  methods: {
+    deleteNinja: function() {
+      this.ninjas.pop();
+    }
+  }
 
 }
 </script>

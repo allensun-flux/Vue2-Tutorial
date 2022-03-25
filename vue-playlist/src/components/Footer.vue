@@ -8,8 +8,11 @@
 export default {
   data() {
     return {
-      copyright: 'Copyright 2017 Vue Ninjas'
+      copyright: `Copyright 2017 Vue ${this.title}`
     }
+  },
+  props: {
+    title: {type:String, required: true},
   }
 }
 </script>
