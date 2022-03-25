@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <app-header :title="ninjasTitle"/>
+      <app-header :title="ninjasTitle" v-on:changeTitle="updateTitle($event)"/>
       <app-ninjas :ninjas="ninjas" :ninjasTitle="ninjasTitle"/>
       <app-ninjas :ninjas="ninjas" :ninjasTitle="ninjasTitle"/>
       <app-footer :title="ninjasTitle"/>
@@ -43,6 +43,9 @@ export default {
     // greeting() {
     //   return 'heeeeey, cowboy!';    
     // }
+    updateTitle(updatedTitle) {
+      this.ninjasTitle = updatedTitle;
+    }
   }
 }
 </script>

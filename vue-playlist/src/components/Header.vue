@@ -7,15 +7,15 @@
 <script>
 export default {
   data() {
-    return {
-    }
+    return {}
   },
   props: {
     title: {title: String, require: true}
   },
   methods: {
     changeTitle: function() {
-      this.title = "Vue Wizards";
+      // this.title = "Vue Wizards";
+      this.$emit('changeTitle', 'Vue Wizards')
     }
   }
 }
