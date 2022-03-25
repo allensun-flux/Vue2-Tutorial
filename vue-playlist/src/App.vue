@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>{{ title }}</div>
+    <h1>{{ title }}</h1>
     <p>{{ greeting() }}</p>
     <ninjas></ninjas>
   </div>
@@ -26,5 +26,7 @@ export default {
 </script>
 
 <style>
-
+h1{
+  color: purple;
+}
 </style>
