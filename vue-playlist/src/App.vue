@@ -1,16 +1,29 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
-    <p>{{ greeting() }}</p>
-    <ninjas></ninjas>
+    <div>
+      <app-header />
+      <app-ninjas />
+      <app-footer />
+    </div>
+    <!-- <div>
+      <h1>#19 Nesting Components</h1>
+      <h1>{{ title }}</h1>
+      <p>{{ greeting() }}</p>
+      <ninjas></ninjas>
+    </div> -->
   </div>
 </template>
 
 <script>
-import Ninjas from './Ninjas';
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue'
+import Ninjas from './components/Ninjas.vue'
+
 export default {
-  component: {
-    ninjas: Ninjas
+  components: {
+    'app-header': Header,
+    'app-footer': Footer,
+    'app-ninjas': Ninjas,
   },
   data () {
     return {
@@ -18,9 +31,9 @@ export default {
     }
   },
   methods: {
-    greeting() {
-      return 'heeeeey, cowboy!';    
-    }
+    // greeting() {
+    //   return 'heeeeey, cowboy!';    
+    // }
   }
 }
 </script>
